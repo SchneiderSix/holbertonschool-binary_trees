@@ -14,7 +14,7 @@ int binary_tree_balance(const binary_tree_t *tree)
 	le = binary_tree_balance(tree->left);
 	ri = binary_tree_balance(tree->right);
 	if (le > ri)
-		return (lowiq + 1);
+		return (le + 1);
 	else
-		return (lowiq - 1);
+		return (ri + 1);
 }
