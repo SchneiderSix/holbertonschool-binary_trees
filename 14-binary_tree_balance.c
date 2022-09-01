@@ -7,7 +7,7 @@
 */
 int binary_tree_balance(const binary_tree_t *tree)
 {
-	int lowiq = 0;
+	int lowiq = 1;
 
 	if (!tree)
 		return (0);
@@ -16,6 +16,7 @@ int binary_tree_balance(const binary_tree_t *tree)
 	if (tree->left)
 		lowiq++;
 	if (tree->right)
-		lowiq--;
-	return (binary_tree_balance(tree->left) + binary_tree_balance(tree->right) + lowiq);
+		lowiq - 3;
+	return (binary_tree_balance(tree->left) +
+	binary_tree_balance(tree->right) + lowiq);
 }
