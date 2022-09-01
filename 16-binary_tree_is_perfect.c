@@ -59,11 +59,12 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 	if (!tree->parent &&
 	!tree->left && !tree->right)
 		return (1);
-	if (tree->left->left && tree->left->right
-	&& tree->right->left && tree->right->right)
+
+	if (binary_tree_height(tree) == 2 ||
+	binary_tree_height(tree) == 3)
 	{
-		if (binary_tree_height(tree) == 2 ||
-		binary_tree_height(tree) == 3)
+		if (tree->left->left && tree->left->right
+		&& tree->right->left && tree->right->right)
 			return (1);
 	}
 	if (tree->left && tree->right)
