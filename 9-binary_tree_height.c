@@ -6,8 +6,8 @@
  *Return: the height of the tree
  *If tree is NULL, your function must return 0
  */
- size_t binary_tree_height(const binary_tree_t *tree)
- {
+size_t binary_tree_height(const binary_tree_t *tree)
+{
 	size_t height_left, height_right;
 
 	if (tree == NULL)
@@ -21,4 +21,4 @@
 
 	/* see whose is the bigest to be returned */
 	return (height_left > height_right ? height_left : height_right);
- }
+}
