@@ -17,6 +17,10 @@ int binary_tree_balance(const binary_tree_t *tree)
 		i++;
 	if (tree->right)
 		q++;
+	if (i > q)
+		i++;
+	else
+		q++;
 	return (binary_tree_balance(tree->left) +
 	binary_tree_balance(tree->right) +
 	i - q);
