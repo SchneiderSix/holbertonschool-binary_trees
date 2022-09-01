@@ -16,7 +16,11 @@ binary_tree_t *binary_tree_sibling(binary_tree_t *node)
 	return (NULL);
 }
 
-
+/**
+* binary_tree_uncle - search your uncle
+* @node: search uncle of node
+* Return: null or uncle
+*/
 binary_tree_t *binary_tree_uncle(binary_tree_t *node)
 {
 	if (!node || !node->parent)
