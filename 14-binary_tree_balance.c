@@ -19,5 +19,5 @@ int binary_tree_balance(const binary_tree_t *tree)
 		q++;
 	return (binary_tree_balance(tree->left) +
 	binary_tree_balance(tree->right) +
-	i - q + 1);
+	i - q);
 }
