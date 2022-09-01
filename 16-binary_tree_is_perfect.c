@@ -7,7 +7,7 @@
 */
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
-	int flag;
+	int flag = 0;
 
 	if (!tree)
 		return (0);
