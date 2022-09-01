@@ -31,6 +31,7 @@ int binary_tree_balance(const binary_tree_t *tree)
 		i++;
 	if (tree->right)
 		q++;
+	/* special case for Left-height = 2 and right-height = 1 */
 	if (i == 3 && q == 3 && tree->left->left
 	&& tree->left->right)
 		return (1);
